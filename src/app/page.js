@@ -10,6 +10,7 @@ export default function Home() {
         <Header/>
         <Hero/>
         <Cars/>
+        <div className='h-[4000px]'></div>
     </main>
   )
 }
