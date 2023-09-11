@@ -23,7 +23,7 @@ export default function LocationSelection() {
         <div className='w-full h-16 xl:h-full flex justify-center xl:justify-start xl:border-r xl:pr-4 xl:border-black/10'>
           <div className='flex flex-col justify-center'>
             <div className='flex flex-col xl:flex-row items-center xl:gap-x-2 gap-y-2 xl:gap-y-0'>
-              <FaMapMarkerAlt className='text-accent'/>
+              <FaMapMarkerAlt className='text-accent text-[24px]'/>
               <div className='text-[15px] uppercase font-bold'>Select Location</div>
             </div>
             <div className='uppercase font-medium text-[13px] text-seconday text-center xl:ml-6 xl:text-left'>{location}</div>

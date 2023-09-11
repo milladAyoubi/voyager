@@ -30,17 +30,34 @@ export default function DataSelection() {
         <div className='w-full h-16 xl:h-full flex justify-center xl:justify-start xl:border-r xl:border-black/10'>
           <div className='flex flex-col justify-center'>
             <div className='flex flex-col xl:flex-row items-center xl:gap-x-2 gap-y-2 xl:gap-y-0'>
-              <FaCalendarAlt className='text-accent'/>
+              <FaCalendarAlt className='text-accent text-[24px]'/>
               <div className='text-[15px] uppercase font-bold'>Select Date</div>
             </div>
-            <div className='uppercase font-medium text-[13px] text-seconday text-center xl:ml-6 xl:text-left'></div>
+            <div className='flex items-center gap-x-3 xl:ml-6'>
+              <div className='text-[13px] font-medium text-seconday'>{format(date[0].startDate, 'dd/MM/yyy')}</div>
+              <FaArrowRightLong className='text-accent text-[12px]'/>
+              <div className='text-[13px] font-medium text-secondary'>
+                {date[0].endDate ? (
+                  <div>{format(date[0].endDate, 'dd/MM/yyyy')}</div>
+                ) : (
+                  <div>{format(date[0].startDate, 'dd/MM/yyyy')}</div>
+                )}
+              </div>
+            </div>
           </div>
         </div>
         
         </Menu.Button>
-        <Menu.Items className='dropdown-menu shadow-lg absolute -top-56 xl:top-[90px] left-1/2 xl:left-0 z-10 transform -translate-x-1/2
-        xl:-translate-x-0 text-sm text-center xl:text-left w-full bg-white max-w-[332px] py-6 rounded-[10px]'>
-          Menu Items
+        <Menu.Items className='dropdown-menu shadow-lg absolute -top-96 xl:top-[90px] left-1/2 xl:left-0 z-10 transform -translate-x-1/2
+        xl:-translate-x-0 text-sm text-center xl:text-left w-full bg-white max-w-[332px] rounded-[10px] overflow-hidden'>
+          <DateRange
+          onChange={(item) => setDate([item.selection])}
+          editableDataInputs={true}
+          moveRangeOnFirstSelection={false}
+          ranges={date}
+          rangeColors={['#ed1d24']}
+          minData={addDays(new Date(), 0)}
+          />
         </Menu.Items>
       </div>
       
