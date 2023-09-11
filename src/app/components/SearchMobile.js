@@ -1,13 +1,12 @@
 
-import DataSelection from "./DataSelection"
 import HoursSelection from "./HoursSelection"
 import LocationSelection from "./LocationSelection"
-
+import DataSelection from "./DataSelection"
 export default function SearchMobile() {
     return (
         <div className="xl:hidden font-medium">
             <div className="container mx-auto">
-                <div className="flex flex-col gap-y-4">
+                <div className="flex flex-col gap-y-4 items-center">
                 <LocationSelection/>
                 <DataSelection/>
                 <HoursSelection/>

@@ -4,7 +4,7 @@ import Image from 'next/image'
 import {Link} from 'react-scroll'
 
 import {useMediaQuery} from 'react-responsive'
-
+import SearchMobile from './SearchMobile'
 
 import { BiMenuAltRight, BiX} from 'react-icons/bi'
 import { SearchContext } from './SearchContext'
@@ -108,7 +108,7 @@ export default function Header() {
         spy={true}>
           Search Mobile
         </Link>
-        
+        <SearchMobile/>
       </nav>
     </div>
     </header>
