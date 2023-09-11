@@ -7,9 +7,12 @@ import {useMediaQuery} from 'react-responsive'
 
 
 import { BiMenuAltRight, BiX} from 'react-icons/bi'
+import { SearchContext } from './SearchContext'
 
 
 export default function Header() {
+
+  const {setSearchActive} = useContext(SearchContext)
   const [header, setHeader] = useState(false);
   const [nav, setNav] = useState(false)
 
@@ -24,6 +27,12 @@ export default function Header() {
         setHeader(true);
       } else {
         setHeader(false);
+      }
+
+      if(window.scrollY > 800) {
+        setSearchActive(true) 
+      } else {
+        setSearchActive(false)
       }
     }
 
@@ -92,6 +101,14 @@ export default function Header() {
         spy={true}>
           See All Cars
         </Link>
+        <Link 
+        className='cursor-pointer' 
+        to='contact' activeClass='active' 
+        smooth={desktopMode} 
+        spy={true}>
+          Search Mobile
+        </Link>
+        
       </nav>
     </div>
     </header>

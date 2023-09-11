@@ -1,10 +1,10 @@
 import React from 'react'
 
-function About() {
+const About = () => {
   return (
-    <div>
-      
-    </div>
+    <section className='section flex items-center bg-pink-200' id="about">
+        About
+    </section>
   )
 }
 

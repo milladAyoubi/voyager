@@ -1,11 +1,11 @@
 import React from 'react'
 
-function Cars() {
+
+
+export default function Cars() {
   return (
-    <div>
-      
-    </div>
+    <section className='h-screen flex items-center bg-yellow-200' id="cars">
+
+    </section>
   )
 }
-
-export default Cars

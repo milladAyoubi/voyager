@@ -1,9 +1,24 @@
-'use client'
+"use client"
 
-import { createContext, useContext, useState } from "react"
+import { useContext } from "react"
+import { SearchContext } from "./SearchContext"
+import LocationSelection from "./LocationSelection"
 
-export const SearchContext = createContext()
 
-export const SearchContextProvider = () => {
+export default function Search() {
+    const {searchActive} = useContext(SearchContext)
+    return (
+    
+    <div className={`${searchActive ? 'bg-white rounded-none xl:h-[80px]' :
+     'bg-white rounded-[20px] py-6 xl:pr-4 xl:h-[98px]'} 
+    hidden xl:block w-full relative shadown-lg`}>
 
+        <div className="xl:h-full flex items-center px-6 xl:px-0 ">
+
+        <LocationSelection/>
+
+        </div>
+
+    </div>
+    )
 }

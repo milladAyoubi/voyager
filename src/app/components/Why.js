@@ -1,11 +1,10 @@
 import React from 'react'
 
-function Why() {
+
+export default function Why() {
   return (
-    <div>
-      
-    </div>
+    <section className='section flex items-center bg-green' id='why'>
+
+    </section>
   )
 }
-
-export default Why
