@@ -35,7 +35,7 @@ export default function LocationSelection() {
         xl:-translate-x-0 text-sm text-center xl:text-left w-full bg-white max-w-[332px] py-6 rounded-[10px]'>
           {locations.map((location,index)=> {
             return (
-              <div key={index} onClick={()=> setLocation(location)} className='cursor-pointer py-4 xl:pl-10 hover:bg-grey-50 text-[13px] uppercase'>{location}</div>
+              <div key={index} onClick={()=> setLocation(location)} className='cursor-pointer py-4 xl:pl-10 hover:bg-gray-50 ext-[13px] uppercase'>{location}</div>
             )
           })}
         </Menu.Items>
