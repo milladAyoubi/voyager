@@ -27,7 +27,7 @@ module.exports = {
                     DEFAULT: '#ed1d24',
                     hover: '#dd242a'
                 },
-                body: '#dedede',
+                body: '#ffffff',
             },
             backgroundImage: {
                 'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',

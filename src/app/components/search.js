@@ -11,16 +11,16 @@ export default function Search() {
     return (
     
     <div className={`${searchActive ? 'bg-white rounded-none xl:h-[80px]' :
-     'bg-white rounded-[20px] py-6 xl:pr-4 xl:h-[98px]'} 
+     'bg-white rounded-[20px] py-6 xl:pr-4 xl:h-[98px] shadow-lg'} 
     hidden xl:block w-full relative shadown-lg`}>
-        <div className="xl:h-full flex items-center px-6 xl:px-0 ">
+        <div className={` flex h-full ${searchActive && 'container mx-auto'}`}>
 
         <LocationSelection/>
         <DataSelection/>
         <HoursSelection/>
         
             <div className="xl:h-full flex items-center px-6 xl:px-0">
-                <button className="btn btn-sm btn-accent xl:w-[164px]">
+                <button className={`${searchActive ?  'btn btn-sm btn-accent xl:w-[164px]' : 'btn btn-sm btn-accent xl:w-[184px]'}`}>
                     Search
                 </button>
             </div>
