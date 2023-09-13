@@ -4,6 +4,8 @@ import React, { useContext } from 'react'
 import Search from './Search'
 import { SearchContext } from './SearchContext'
 
+import {motion, easeInOut} from 'framer-motion'
+import {fadeIn} from './varients';
 export default function Hero() {
  const {searchActive} = useContext(SearchContext)
   return (
@@ -11,20 +13,20 @@ export default function Hero() {
       <div className='container mx-auto h-full xl:pt-10'>
         <div className='flex flex-col xl:flex-row justify-center items-center xl:justify-start h-full'>
           <div className='text-center xl:max-w-4xl xl:text-left mt-16 xl:mt-8'>
-            <h1 className='h1'>Explore The <span className='text-accent'>Finest Global Offers</span> With Voyager</h1>
-            <p className='description max-w-[550px] mx-auto xl:mx-0 mb-6 xl:mb-10'>Find your ideal ride for any adventure you desire. With our divers range of vehicles for any occasion.</p>
-            <div className='flex gap-x-3 justify-center xl:justify-start'>
+            <motion.h1 variants={fadeIn('down',0.2)} initial="hidden" whileInView={"show"} viewport={{once: false, amount:0.6}} className='h1'>Explore The <span className='text-accent'>Finest Global Offers</span> With Voyager</motion.h1>
+            <motion.p variants={fadeIn('down',0.4)} initial="hidden" whileInView={"show"} viewport={{once: false, amount:0.6}} className='description max-w-[550px] mx-auto xl:mx-0 mb-6 xl:mb-10'>Find your ideal ride for any adventure you desire. With our divers range of vehicles for any occasion.</motion.p>
+            <motion.div variants={fadeIn('down',0.6)} initial="hidden" whileInView={"show"} viewport={{once: false, amount:0.8}} className='flex gap-x-3 justify-center xl:justify-start'>
               <button className='btn-cta'>
                 <Image src={'/icons/buttons/google-play.svg'} width={132} height={36} alt=''></Image>
               </button>
               <button className='btn-cta'>
                 <Image src={'/icons/buttons/app-store.svg'} width={132} height={36} alt=''></Image>
               </button>
-            </div>
+            </motion.div>
           </div>
-          <div className='relative w-full h-full max-w-[50vh] md:max-w-[70vw] xl:max-w-[760px] xl:max-h-[442px] xl:absolute min-[80px] right-[0px] xl:top-38'>
+          <motion.div variants={fadeIn('up',0.2)} initial="hidden" whileInView={"show"} viewport={{once: false, amount:0.6}} className='relative w-full h-full max-w-[50vh] md:max-w-[70vw] xl:max-w-[780px] xl:max-h-[452px] xl:absolute min-[80px] right-[0px] xl:top-38'>
             <Image src={'/images/hero/car.svg'} fill alt='' style={{objectFit: 'contain'}} priority ></Image>
-          </div>
+          </motion.div>
         </div>
       </div>
       {
@@ -33,9 +35,9 @@ export default function Hero() {
            <Search/>
         </div>
         ) : (
-          <div className='-mt-12 w-full max-w-[1300px] mx-auto'>
+          <motion.div variants={fadeIn('up',0.4)} initial="hidden" whileInView={"show"} viewport={{once: false, amount:0.6}} className='-mt-12 w-full max-w-[1300px] mx-auto'>
            <Search/>
-          </div>
+          </motion.div>
         )
       }
      
