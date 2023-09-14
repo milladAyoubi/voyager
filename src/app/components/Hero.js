@@ -10,9 +10,9 @@ export default function Hero() {
  const {searchActive} = useContext(SearchContext)
   return (
     <section className='h-screen xl:h-[90vh]' id='home'>
-      <div className='container mx-auto h-full xl:pt-10'>
+      <div className='container mx-auto  h-full xl:pt-10'>
         <div className='flex flex-col xl:flex-row justify-center items-center xl:justify-start h-full'>
-          <div className='text-center xl:max-w-4xl xl:text-left mt-16 xl:mt-8'>
+          <div className='text-center xl:max-w-4xl xl:text-left mt-16  xl:mt-0'>
             <motion.h1 variants={fadeIn('down',0.2)} initial="hidden" whileInView={"show"} viewport={{once: false, amount:0.6}} className='h1'>Explore The <span className='text-accent'>Finest Global Offers</span> With Voyager</motion.h1>
             <motion.p variants={fadeIn('down',0.4)} initial="hidden" whileInView={"show"} viewport={{once: false, amount:0.6}} className='description max-w-[550px] mx-auto xl:mx-0 mb-6 xl:mb-10'>Find your ideal ride for any adventure you desire. With our divers range of vehicles for any occasion.</motion.p>
             <motion.div variants={fadeIn('down',0.6)} initial="hidden" whileInView={"show"} viewport={{once: false, amount:0.8}} className='flex gap-x-3 justify-center xl:justify-start'>
