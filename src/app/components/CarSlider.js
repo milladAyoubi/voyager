@@ -24,20 +24,20 @@ const cars = [
         text: 'Manual',
     },
     {
-        icon: 'icon/carSlider/seat.svg',
+        icon: 'icons/carSlider/seat.svg',
         text: '5 Seats'
     },
     {
-        icon: 'icon/carSlider/gas.svg',
+        icon: 'icons/carSlider/gas.svg',
         text: 'Petrol'
     },
     {
-        icon: 'icon/carSlider/engine.svg',
+        icon: 'icons/carSlider/engine.svg',
         text: '192 HP'
     },
     {
-        icon: 'icon/carSlider/wheel.svg',
-        text: 'Front Wheel Drive (FWD)'
+        icon: 'icons/carSlider/wheel.svg',
+        text: 'FWD'
     }
 
     ]
@@ -53,20 +53,20 @@ const cars = [
             text: 'Automatic',
         },
         {
-            icon: 'icon/carSlider/seat.svg',
+            icon: 'icons/carSlider/seat.svg',
             text: '5 Seats'
         },
         {
-            icon: 'icon/carSlider/gas.svg',
+            icon: 'icons/carSlider/gas.svg',
             text: 'Petrol'
         },
         {
-            icon: 'icon/carSlider/engine.svg',
+            icon: 'icons/carSlider/engine.svg',
             text: '152 HP'
         },
         {
-            icon: 'icon/carSlider/wheel.svg',
-            text: 'Front Wheel Drive (FWD)'
+            icon: 'icons/carSlider/wheel.svg',
+            text: 'FWD'
         }
     
         ] 
@@ -82,20 +82,20 @@ const cars = [
         text: 'Automatic',
     },
     {
-        icon: 'icon/carSlider/seat.svg',
+        icon: 'icons/carSlider/seat.svg',
         text: '5 Seats'
     },
     {
-        icon: 'icon/carSlider/gas.svg',
+        icon: 'icons/carSlider/gas.svg',
         text: 'Petrol'
     },
     {
-        icon: 'icon/carSlider/engine.svg',
+        icon: 'icons/carSlider/engine.svg',
         text: '206 HP'
     },
     {
-        icon: 'icon/carSlider/wheel.svg',
-        text: 'All Wheel Drive (AWD)'
+        icon: 'icons/carSlider/wheel.svg',
+        text: 'AWD'
     }
 
     ]
@@ -111,20 +111,20 @@ const cars = [
             text: 'Automatic',
         },
         {
-            icon: 'icon/carSlider/seat.svg',
+            icon: 'icons/carSlider/seat.svg',
             text: '5 Seats'
         },
         {
-            icon: 'icon/carSlider/gas.svg',
+            icon: 'icons/carSlider/gas.svg',
             text: 'Petrol'
         },
         {
-            icon: 'icon/carSlider/engine.svg',
+            icon: 'icons/carSlider/engine.svg',
             text: '152 HP'
         },
         {
-            icon: 'icon/carSlider/wheel.svg',
-            text: 'Front Wheel Drive (FWD)'
+            icon: 'icons/carSlider/wheel.svg',
+            text: 'FWD'
         }
     
         ] 
@@ -140,31 +140,34 @@ const cars = [
         text: 'Automatic',
     },
     {
-        icon: 'icon/carSlider/seat.svg',
+        icon: 'icons/carSlider/seat.svg',
         text: '5 Seats'
     },
     {
-        icon: 'icon/carSlider/gas.svg',
+        icon: 'icons/carSlider/gas.svg',
         text: 'Petrol'
     },
     {
-        icon: 'icon/carSlider/engine.svg',
+        icon: 'icons/carSlider/engine.svg',
         text: '206 HP'
     },
     {
-        icon: 'icon/carSlider/wheel.svg',
-        text: 'All Wheel Drive (AWD)'
+        icon: 'icons/carSlider/wheel.svg',
+        text: 'AWD'
     }
 
     ]
     }
-
-
 ]
 
 export default function CarSlider() {
     return ( 
-        <div className='container mx-auto'>
+        <motion.div 
+        variants={fadeIn('up', 0.8)}
+        initial='hidden'
+        whileInView={'show'}
+        viewport={{once: false, amount: 0.6}}
+        className='container mx-auto cursor-pointer mt-4'>
             <Swiper breakpoints={{
 
                 320:{slidesPerView:1, spaceBetween:15},
@@ -175,21 +178,43 @@ export default function CarSlider() {
             
             {cars.map((car, index) => {
                 return <SwiperSlide key={index}>
-                    <div className='max-w-[385px] mx-auto sm:mx-0 bg-gray-100 h-[300px]'>
+                    <div className='max-w-[385px] mx-auto sm:mx-0  p-4 rounded-2xl'>
                         <Image src={car.image} width={380} height={284} alt=''/>
-                        <div>
+                        <div className='flex justify-between'>
                             <div>
-                                <div>{car.type}</div>
-                                <div>{car.name}</div>
-                                <div>{car.price}</div>
+                                <div className='text-[13px] text-secondary uppercase'>{car.type}</div>
+                                <h3 className='text-lg uppercase font-bold'>{car.name}</h3>
+                                <div className='mb-10 font-light uppercase'>${car.price}/day</div>
 
                             </div>
+                            <div className='flex gap-x-2 relative right-7'>
+                                <p className='font-medium text-black/30'>{car.stars}</p>
+                                <FaStar className='text-[21px] text-amber-500/90'/>
+                            </div>
                         </div>
+                        <div className='flex gap-x-3 xl:gap-x-4 w-max mb-10'>
+                            {car.info.map((item, index) => {
+                                return (
+                                    <div key={index} className='flex flex-col items-center gap-y-1'>
+                                        <div className='bg-primary/90 w-12 h-12 rounded-full flex justify-center items-center mb-2'>
+                                            <Image
+                                             src={item.icon}
+                                             width={24}
+                                             height={24}
+                                             alt=''
+                                            />
+                                        </div>
+                                        <div className='text-[12px] uppercase'>{item.text}</div>
+                                    </div>
+                                )
+                            })}
+                        </div>
+                        <button className='btn btn-accent btn-lg'>View Details</button>
                     </div>
                 </SwiperSlide>
             })}
             </Swiper>
-        </div>
+        </motion.div>
 
     )
 }

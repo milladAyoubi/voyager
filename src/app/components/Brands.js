@@ -7,8 +7,15 @@ import {fadeIn} from './varients'
 
 export default function Brands() {
     return (
-        <section className='xl:pt-16 xl:h-[200px] bg-white flex flex-col justify-center'>
-            <div className='container mx-auto'>
+        <section className='xl:pt-16 xl:h-[200px] bg-white flex flex-col justify-center mt-12 text-center'>
+            
+            <motion.div
+            variants={fadeIn('up', 0.4)}
+            initial='hidden'
+            whileInView={'show'}
+            viewport={{once: false, amount: 0.6}}
+            className='container mx-auto text-primary/40'>
+                <h2 className='h2 mb-12'>Trusted By Over 20+ Auto Makers</h2>
                 <div className='grid grid-cols-3 gap-6 place-items-center xl:flex xl:flex-wrap xl:gap-x-6 xl:justify-between'>
                     <div>
                         <Image
@@ -59,7 +66,7 @@ export default function Brands() {
                         />
                     </div>
                 </div>
-            </div>
+            </motion.div>
         </section>
     )
 }
