@@ -3,7 +3,7 @@ import Header from "../app/components/Header"
 import Hero from "../app/components/Hero"
 import Cars from './components/Cars'
 import About from './components/About'
-
+import Why from './components/Why'
 
 export default function Home() {
   return (
@@ -12,6 +12,8 @@ export default function Home() {
         <Hero/>
         <Cars/>
         <About/>
+        <Why/>
+        
         <div className='h-[4000px]'></div>
     </main>
   )
