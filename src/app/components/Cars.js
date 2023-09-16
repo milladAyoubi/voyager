@@ -5,7 +5,7 @@ import CarSlider from './CarSlider'
 
 export default function Cars() {
   return (
-    <section className='h-screen flex items-center' id="cars">
+    <section className=' mt-24 flex items-center' id="cars">
         <div className='container mx-auto'>
           <Brands/>
           <CarSlider/>

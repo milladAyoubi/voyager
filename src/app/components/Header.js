@@ -45,14 +45,15 @@ export default function Header() {
   console.log(header)
   return (
   
-  <header className={`${header ? 'bg-white shadow-md py-2' : 
+  <header className={`${header ? 'bg-white shadow-md py-4' : 
   'bg-transparent shadow-none py-4'} 
   fixed w-full max-w-[1920px] mx-auto z-20 transition-all duration-300`}>
     
     <div className='xl:container mx-auto flex flex-col xl:flex-row xl:items-center xl:justify-between'>
       <div className='flex justify-between items-center px-4'>
         <Link to='home' smooth={desktopMode} spy={true} className='cursor-pointer'>
-          <Image src={'/icons/logo01.svg'} width={194} height={64} className="xl:h-[70px]"alt='' />
+          <Image src={'/icons/logo01.svg'} width={194} height={64} className={`${header ? 'bg-white py-4' : 
+  'bg-transparent shadow-none py-4'} `}alt='' />
         </Link>
 
         <div onClick={()=> setNav(!nav)} className='cursor-pointer xl:hidden'>{nav ? (
