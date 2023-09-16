@@ -52,10 +52,10 @@ export default function Header() {
     <div className='xl:container mx-auto flex flex-col xl:flex-row xl:items-center xl:justify-between'>
       <div className='flex justify-between items-center px-4'>
         <Link to='home' smooth={desktopMode} spy={true} className='cursor-pointer'>
-          <Image src={'/icons/logo.svg'} width={194} height={64} alt='' />
+          <Image src={'/icons/logo01.svg'} width={194} height={64} className="xl:h-[70px]"alt='' />
         </Link>
 
-        <div onClick={()=> setNav(!nav)} className='cursor-pointer xl:hidden('>{nav ? (
+        <div onClick={()=> setNav(!nav)} className='cursor-pointer xl:hidden'>{nav ? (
         
         <BiX className='text-4xl'/> ) : 
         

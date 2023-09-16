@@ -5,7 +5,7 @@ import 'swiper/css'
 
 import Image from 'next/image'
 
-import { FaStar, FaStarHalfAlt, FaRegStar } from 'react-icons/fa'
+import { FaStar, FaStarHalfAlt, FaRegStar, FaFire } from 'react-icons/fa'
 
 import { motion } from 'framer-motion'
 
@@ -13,6 +13,93 @@ import { fadeIn } from './varients'
 
 
 const cars = [
+    {
+        type: 'SUV',
+        name: 'Lexus LX400',
+        price: 42,
+        stars: 5,
+        image: '/images/carSlider/lexus02.png',
+        info: [{
+            icon: 'icons/carSlider/gearshift.svg',
+            text: 'Automatic',
+        },
+        {
+            icon: 'icons/carSlider/seat.svg',
+            text: '5 Seats'
+        },
+        {
+            icon: 'icons/carSlider/gas.svg',
+            text: 'Petrol'
+        },
+        {
+            icon: 'icons/carSlider/engine.svg',
+            text: '286 HP'
+        },
+        {
+            icon: 'icons/carSlider/wheel.svg',
+            text: 'AWD'
+        }
+    
+        ]
+    },
+    {
+        type: 'Crossover',
+        name: 'Range Rover Evoque',
+        price: 48,
+        stars: 4.9,
+        image: '/images/carSlider/range02.png',
+        info: [{
+            icon: 'icons/carSlider/gearshift.svg',
+            text: 'Automatic',
+        },
+        {
+            icon: 'icons/carSlider/seat.svg',
+            text: '5 Seats'
+        },
+        {
+            icon: 'icons/carSlider/gas.svg',
+            text: 'Petrol'
+        },
+        {
+            icon: 'icons/carSlider/engine.svg',
+            text: '420 HP'
+        },
+        {
+            icon: 'icons/carSlider/wheel.svg',
+            text: 'AWD'
+        }
+    
+        ] 
+    },
+    {
+        type: 'SUV',
+        name: 'Jaguer F-Pace',
+        price: 68,
+        stars: 5,
+        image: '/images/carSlider/jag02.png',
+        info: [{
+            icon: 'icons/carSlider/gearshift.svg',
+            text: 'Automatic',
+        },
+        {
+            icon: 'icons/carSlider/seat.svg',
+            text: '5 Seats'
+        },
+        {
+            icon: 'icons/carSlider/gas.svg',
+            text: 'Petrol'
+        },
+        {
+            icon: 'icons/carSlider/engine.svg',
+            text: '560 HP'
+        },
+        {
+            icon: 'icons/carSlider/wheel.svg',
+            text: 'AWD'
+        }
+    
+        ]
+    },
     {
     type: 'Hatchback',
     name: 'Audi Q3',
@@ -43,11 +130,11 @@ const cars = [
     ]
     },
     {
-        type: 'Sedan',
-        name: 'Range Rover',
-        price: 48,
+        type: 'Sport',
+        name: 'Toyota Supra MkV',
+        price: 52,
         stars: 4.9,
-        image: '/images/carSlider/range01.png',
+        image: '/images/carSlider/supra02.png',
         info: [{
             icon: 'icons/carSlider/gearshift.svg',
             text: 'Automatic',
@@ -62,102 +149,16 @@ const cars = [
         },
         {
             icon: 'icons/carSlider/engine.svg',
-            text: '420 HP'
+            text: '382 HP'
         },
         {
             icon: 'icons/carSlider/wheel.svg',
-            text: 'AWD'
+            text: 'RWD'
         }
     
         ] 
     },
-    {
-    type: 'SUV',
-    name: 'Lexus LX400',
-    price: 42,
-    stars: 5,
-    image: '/images/carSlider/lexus01.png',
-    info: [{
-        icon: 'icons/carSlider/gearshift.svg',
-        text: 'Automatic',
-    },
-    {
-        icon: 'icons/carSlider/seat.svg',
-        text: '5 Seats'
-    },
-    {
-        icon: 'icons/carSlider/gas.svg',
-        text: 'Petrol'
-    },
-    {
-        icon: 'icons/carSlider/engine.svg',
-        text: '286 HP'
-    },
-    {
-        icon: 'icons/carSlider/wheel.svg',
-        text: 'AWD'
-    }
-
-    ]
-    },
-    {
-        type: 'Sedan',
-        name: 'Toyota Corolla',
-        price: 25,
-        stars: 4.9,
-        image: 'images/carSlider/car02.svg',
-        info: [{
-            icon: 'icons/carSlider/gearshift.svg',
-            text: 'Automatic',
-        },
-        {
-            icon: 'icons/carSlider/seat.svg',
-            text: '5 Seats'
-        },
-        {
-            icon: 'icons/carSlider/gas.svg',
-            text: 'Petrol'
-        },
-        {
-            icon: 'icons/carSlider/engine.svg',
-            text: '152 HP'
-        },
-        {
-            icon: 'icons/carSlider/wheel.svg',
-            text: 'FWD'
-        }
     
-        ] 
-    },
-    {
-    type: 'SUV',
-    name: 'Honda CR-V',
-    price: 38,
-    stars: 5,
-    image: 'images/carSlider/car03.svg',
-    info: [{
-        icon: 'icons/carSlider/gearshift.svg',
-        text: 'Automatic',
-    },
-    {
-        icon: 'icons/carSlider/seat.svg',
-        text: '5 Seats'
-    },
-    {
-        icon: 'icons/carSlider/gas.svg',
-        text: 'Petrol'
-    },
-    {
-        icon: 'icons/carSlider/engine.svg',
-        text: '206 HP'
-    },
-    {
-        icon: 'icons/carSlider/wheel.svg',
-        text: 'AWD'
-    }
-
-    ]
-    }
 ]
 
 export default function CarSlider() {
@@ -179,7 +180,7 @@ export default function CarSlider() {
             {cars.map((car, index) => {
                 return <SwiperSlide key={index}>
                     <div className='max-w-[385px] mx-auto sm:mx-0  p-4 rounded-2xl'>
-                        <Image src={car.image} width={380} height={284} className="xl:h-[234px] hover:scale-105 transition-all duration-300"alt=''/>
+                        <Image src={car.image} width={380} height={284} className="hover:scale-105 transition-all duration-300"alt=''/>
                         <div className='flex justify-between'>
                             <div>
                                 <div className='text-[13px] text-secondary uppercase'>{car.type}</div>
