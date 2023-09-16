@@ -1,9 +1,13 @@
-export default function Testimonial() {
-    return ( <
-        section className = "section flex items-center bg-cyan-300"
-        id = "testimonial" >
+import TestimonialSlider from "./TestimonialSlider";
 
-        <
-        /section>
+export default function Testimonial() {
+    return ( 
+        <section className = "section flex items-center "
+        id = "testimonial" >
+            <div className="container mx-auto">
+                <TestimonialSlider/>
+            </div>
+
+        </section>
     )
 }

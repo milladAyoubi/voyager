@@ -11,6 +11,8 @@ import { motion } from 'framer-motion'
 
 import { fadeIn } from './varients'
 
+import { Pagination } from 'swiper/modules'
+
 
 const cars = [
     {
@@ -169,7 +171,15 @@ export default function CarSlider() {
         whileInView={'show'}
         viewport={{once: false, amount: 0.6}}
         className='container mx-auto cursor-pointer mt-12'>
-            <Swiper breakpoints={{
+            <Swiper 
+            
+            pagination={{
+                clickable: true,
+                dynamicBullets: true,
+            }} 
+            modules={[Pagination]}
+            className='xl:h-[590px]'
+            breakpoints={{
 
                 320:{slidesPerView:1, spaceBetween:15},
                 640:{slidesPerView:2, spaceBetween:32},

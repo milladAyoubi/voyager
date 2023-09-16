@@ -24,8 +24,8 @@ export default function Hero() {
               </button>
             </motion.div>
           </div>
-          <motion.div variants={fadeIn('up',0.2)} initial="hidden" whileInView={"show"} viewport={{once: false, amount:0.6}} className='relative w-full h-full max-w-[50vh] md:max-w-[70vw] xl:max-w-[780px] xl:max-h-[452px] xl:absolute min-[80px] right-[0px] xl:top-38'>
-            <Image src={'/images/hero/supra.png'} fill alt='' style={{objectFit: 'contain'}} priority className='flip' ></Image>
+          <motion.div variants={fadeIn('up',0.2)} initial="hidden" whileInView={"show"} viewport={{once: false, amount:0.6}} className='relative w-full h-full max-w-[50vh] md:max-w-[70vw] xl:max-w-[1180px] xl:max-h-[452px] xl:absolute min-[80px] right-[0px] xl:top-38  '>
+            <Image src={'/images/hero/car.png'} fill alt='' style={{objectFit: 'contain'}} priority className='xl:!left-[420px] xl:!absolute' ></Image>
           </motion.div>
         </div>
       </div>
