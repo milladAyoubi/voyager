@@ -44,10 +44,10 @@ const cars = [
     },
     {
         type: 'Sedan',
-        name: 'Mercedes-AMG C600',
+        name: 'Range Rover',
         price: 48,
         stars: 4.9,
-        image: '/images/carSlider/cayenne01.png',
+        image: '/images/carSlider/range01.png',
         info: [{
             icon: 'icons/carSlider/gearshift.svg',
             text: 'Automatic',
@@ -62,7 +62,7 @@ const cars = [
         },
         {
             icon: 'icons/carSlider/engine.svg',
-            text: '650 HP'
+            text: '420 HP'
         },
         {
             icon: 'icons/carSlider/wheel.svg',
@@ -167,7 +167,7 @@ export default function CarSlider() {
         initial='hidden'
         whileInView={'show'}
         viewport={{once: false, amount: 0.6}}
-        className='container mx-auto cursor-pointer mt-4'>
+        className='container mx-auto cursor-pointer mt-12'>
             <Swiper breakpoints={{
 
                 320:{slidesPerView:1, spaceBetween:15},
@@ -179,14 +179,14 @@ export default function CarSlider() {
             {cars.map((car, index) => {
                 return <SwiperSlide key={index}>
                     <div className='max-w-[385px] mx-auto sm:mx-0  p-4 rounded-2xl'>
-                        <Image src={car.image} width={380} height={284} alt=''/>
+                        <Image src={car.image} width={380} height={284} className="xl:h-[234px] hover:scale-105 transition-all duration-300"alt=''/>
                         <div className='flex justify-between'>
                             <div>
                                 <div className='text-[13px] text-secondary uppercase'>{car.type}</div>
                                 <h3 className='text-lg uppercase font-bold'>{car.name}</h3>
                                 <div className='mb-10 font-light uppercase'>${car.price}/day</div>
 
-                            </div>
+                               </div>
                             <div className='flex gap-x-2 relative right-7'>
                                 <p className='font-medium text-black/30'>{car.stars}</p>
                                 <FaStar className='text-[21px] text-amber-500/90'/>
