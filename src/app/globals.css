@@ -48,4 +48,8 @@
   .active {
     @apply text-accent;
   }
+
+  .flip {
+    transform: scaleX(-1);
+  }
 }

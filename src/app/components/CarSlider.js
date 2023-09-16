@@ -15,10 +15,10 @@ import { fadeIn } from './varients'
 const cars = [
     {
     type: 'Hatchback',
-    name: 'Ford Focus',
-    price: 29,
-    stars: 3.5,
-    image: 'images/carSlider/car01.svg',
+    name: 'Audi Q3',
+    price: 39,
+    stars: 4.5,
+    image: '/images/carSlider/audi02.png',
     info: [{
         icon: 'icons/carSlider/gearshift.svg',
         text: 'Manual',
@@ -33,7 +33,7 @@ const cars = [
     },
     {
         icon: 'icons/carSlider/engine.svg',
-        text: '192 HP'
+        text: '242 HP'
     },
     {
         icon: 'icons/carSlider/wheel.svg',
@@ -44,10 +44,10 @@ const cars = [
     },
     {
         type: 'Sedan',
-        name: 'Toyota Corolla',
-        price: 25,
+        name: 'Mercedes-AMG C600',
+        price: 48,
         stars: 4.9,
-        image: 'images/carSlider/car02.svg',
+        image: '/images/carSlider/cayenne01.png',
         info: [{
             icon: 'icons/carSlider/gearshift.svg',
             text: 'Automatic',
@@ -62,21 +62,21 @@ const cars = [
         },
         {
             icon: 'icons/carSlider/engine.svg',
-            text: '152 HP'
+            text: '650 HP'
         },
         {
             icon: 'icons/carSlider/wheel.svg',
-            text: 'FWD'
+            text: 'AWD'
         }
     
         ] 
     },
     {
     type: 'SUV',
-    name: 'Honda CR-V',
-    price: 38,
+    name: 'Lexus LX400',
+    price: 42,
     stars: 5,
-    image: 'images/carSlider/car03.svg',
+    image: '/images/carSlider/lexus01.png',
     info: [{
         icon: 'icons/carSlider/gearshift.svg',
         text: 'Automatic',
@@ -91,7 +91,7 @@ const cars = [
     },
     {
         icon: 'icons/carSlider/engine.svg',
-        text: '206 HP'
+        text: '286 HP'
     },
     {
         icon: 'icons/carSlider/wheel.svg',
