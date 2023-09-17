@@ -90,11 +90,19 @@ export default function Header() {
         </Link>
         <Link 
         className='cursor-pointer' 
+        to='testimonial' activeClass='active' 
+        smooth={desktopMode} 
+        spy={true}>
+          Testimonials
+        </Link>
+        <Link 
+        className='cursor-pointer' 
         to='contact' activeClass='active' 
         smooth={desktopMode} 
         spy={true}>
           Contact
         </Link>
+        
         <Link 
         className='xl:hidden btn btn-primary btm-sm max-w-[164px] mx-auto' 
         to='/' activeClass='active' 
@@ -102,13 +110,8 @@ export default function Header() {
         spy={true}>
           See All Cars
         </Link>
-        <Link 
-        className='cursor-pointer' 
-        to='contact' activeClass='active' 
-        smooth={desktopMode} 
-        spy={true}>
-          Search Mobile
-        </Link>
+        
+        
         <SearchMobile/>
       </nav>
     </div>

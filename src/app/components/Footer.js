@@ -43,10 +43,43 @@ export default function Footer() {
                         </div>
                     </div>
                 </div>
-                <div>1</div>
-                <div>2</div>
-                <div>3</div>
-                <div>4</div>
+
+                <div className='flex-1 flex flex-col xl:items-center'>
+                    <div>
+                        <h3 className='h3 font-bold mb-8'>Company</h3>
+                        <ul className='flex flex-col gap-y-4 font-medium'>
+                            <li><a href="#">Toronto</a></li>
+                            <li><a href="#">Careers</a></li>
+                            <li><a href="#">Contact</a></li>
+                            <li><a href="#">Blog</a></li>
+                            <li><a href="#">Policy</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div className='flex-1'>
+                    <h3 className='h3 font-bold mb-8'>Opening Hours</h3>
+                    <div className='flex flex-col gap-y-4'>
+                        <div className='flex gap-x-2'>
+                            <div className='text-secondary'>Mon-Fri:</div>
+                            <div>9:00AM - 10:00PM</div>
+                        </div>
+                        <div className='flex gap-x-2'>
+                            <div className='text-secondary'>Sat & Sun:</div>
+                            <div>9:00AM - 6:00PM</div>
+                        </div>
+                       
+                    </div>
+                </div>
+                <div className='flex-1'>
+                    <h3 className='h3 font-bold mb-8'>Newsletter</h3>
+                    <div className='mb-9 text-secondary'>You'll be the first to know about our special promotions and discounts.</div>
+                    <form className='flex gap-x-2 h-14'>
+                        <input type='text' placeholder='Your Email' className='outline-none bg-white h-full border rounded-lg pl-4 focus:border-accent'/>
+                            <button type='submit' className='btn btn-sm btn-accent w-24'>Sign Up</button>
+                
+                    </form>
+                </div>
+              
             </motion.div>
         </div>
         </footer>

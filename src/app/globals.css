@@ -22,7 +22,7 @@
     @apply text-base xl:text-xl xl:leading-8;
   }
   .section {
-    @apply w-full h-[70vh] pt-[60px] xl:pt-[0px];
+    @apply w-full h-[100vh] pt-[60px] xl:pt-[0px];
   }
   .btn {
     @apply rounded-[10px] py-4 w-full uppercase font-medium text-white tracking-[2px] text-[13px] flex justify-center items-center transition-all duration-300;
