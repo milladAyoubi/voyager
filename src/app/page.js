@@ -5,6 +5,9 @@ import Cars from './components/Cars'
 import About from './components/About'
 import Why from './components/Why'
 import Testimonial from './components/Testimonials'
+import Cta from './components/Cta'
+import Footer from './components/Footer'
+
 
 export default function Home() {
   return (
@@ -15,8 +18,9 @@ export default function Home() {
         <About/>
         <Why/>
         <Testimonial/>
-        
-        <div className='h-[4000px]'></div>
+        <Cta/>
+        <Footer/>
+        <div className='h-[auto]'></div>
     </main>
   )
 }
