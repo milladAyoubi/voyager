@@ -24,7 +24,7 @@ export default function Cta() {
                         initial='hidden'
                         whileInView={'show'}
                         viewport={{once: false, amount: 0.6}}
-                        className='flex gap-x-3 justify-center md:justify-start'>
+                        className='flex gap-x-3 justify-center md:justify-start mb-20'>
                             <button className='btn-cta'>
                                 <Image
                                 src={'/icons/buttons/google-play.svg'}
@@ -56,11 +56,12 @@ export default function Cta() {
             variants={fadeIn('up', 0.8)}
             initial='hidden'
             whileInView={'show'}
-            viewport={{once:false, amount: 0.2}}>
+            viewport={{once:false, amount: 0.2}}
+            className='mb-20'>
                 <Image
-                src={'/images/cta/phone.svg'}
-                width={320}
-                height={640}
+                src={'/images/carSlider/mercedes01.png'}
+                width={520}
+                height={840}
                 alt=''
                 />
             </motion.div>
