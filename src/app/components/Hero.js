@@ -1,7 +1,7 @@
 "use client"
 import Image from 'next/image'
 import React, { useContext } from 'react'
-import Search from './Search'
+import Search from '../components/Search'
 import { SearchContext } from './SearchContext'
 import {FaChevronDown, FaChevronCircleDown} from 'react-icons/fa'
 import {motion, easeInOut} from 'framer-motion'
@@ -39,7 +39,7 @@ export default function Hero() {
               </button>
             </motion.div>
           </div>
-          <motion.div variants={fadeIn('up',0.2)} initial="hidden" whileInView={"show"} viewport={{once: false, amount:0.6}} className='relative overflow-hidden w-full h-full max-w-[50vh] md:max-w-[70vw] xl:max-w-[1280px] xl:max-h-[452px] xl:absolute min-[80px] right-[0px] xl:top-38  '>
+          <motion.div variants={fadeIn('up',0.2)} initial="hidden" whileInView={"show"} viewport={{once: false, amount:0.6}} className='relative overflow-hidden w-full xl:h-full h-[40%] max-w-[50vh] md:max-w-[70vw] xl:max-w-[1280px] xl:max-h-[452px] xl:absolute min-[80px] right-[0px] xl:top-38  '>
             <Image src={'/images/hero/car.png'} fill alt='' style={{objectFit: 'contain'}} priority className='xl:!left-[460px] xl:fixed' ></Image>
           </motion.div>
         </div>

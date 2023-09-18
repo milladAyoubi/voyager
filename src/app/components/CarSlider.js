@@ -184,7 +184,7 @@ export default function CarSlider() {
                 dynamicBullets: true,
             }} 
             modules={[Pagination]}
-            className='xl:h-[590px]'
+            className='xl:h-[590px] h-[550px]'
             breakpoints={{
 
                 320:{slidesPerView:1, spaceBetween:15},
