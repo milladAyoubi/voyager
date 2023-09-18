@@ -1,7 +1,7 @@
 "use client"
 import Image from 'next/image'
 import React, { useContext } from 'react'
-import Search from '../components/Search'
+import Search from './Search'
 import { SearchContext } from './SearchContext'
 import {FaChevronDown, FaChevronCircleDown} from 'react-icons/fa'
 import {motion, easeInOut} from 'framer-motion'
