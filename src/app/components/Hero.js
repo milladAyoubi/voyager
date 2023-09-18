@@ -1,7 +1,7 @@
 "use client"
 import Image from 'next/image'
 import React, { useContext } from 'react'
-import Search from './Search'
+import SearchAuto from './SearchAuto'
 import { SearchContext } from './SearchContext'
 import {FaChevronDown, FaChevronCircleDown} from 'react-icons/fa'
 import {motion, easeInOut} from 'framer-motion'
@@ -47,11 +47,11 @@ export default function Hero() {
       {
         searchActive ? (
          <div className='fixed top-[80px] z-10 w-full max-w-[1920px]'>
-           <Search/>
+           <SearchAuto/>
         </div>
         ) : (
           <motion.div variants={fadeIn('up',0.4)} initial="hidden" whileInView={"show"} viewport={{once: false, amount:0.6}} className='-mt-12 w-full max-w-[1300px] mx-auto'>
-           <Search/>
+           <SearchAuto/>
           </motion.div>
         )
       }

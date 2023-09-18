@@ -6,7 +6,7 @@ import LocationSelection from "./LocationSelection"
 import DataSelection from "./DataSelection"
 import HoursSelection from "./HoursSelection"
 
-export default function Search() {
+export default function SearchAuto() {
     const {searchActive} = useContext(SearchContext)
     return (
     
