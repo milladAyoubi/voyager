@@ -45,6 +45,14 @@ export default function TestimonialSlider() {
                 clickable: true,
                 dynamicBullets: true,
             }} 
+
+            style={{
+                "--swiper-pagination-color": "#ed1d24",
+                "--swiper-pagination-bullet-inactive-color": "#888888",
+                "--swiper-pagination-bullet-inactive-opacity": "1",
+                "--swiper-pagination-bullet-size": "12px",
+                "--swiper-pagination-bullet-horizontal-gap": "5px"
+              }}
             modules={[Pagination]}
             className='h-[450px] xl:h-[400px]'>
                 {testimonialData.map((person,index) => {

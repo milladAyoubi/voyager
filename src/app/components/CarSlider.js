@@ -172,7 +172,13 @@ export default function CarSlider() {
         viewport={{once: false, amount: 0.6}}
         className='container mx-auto cursor-pointer mt-12'>
             <Swiper 
-            
+             style={{
+                "--swiper-pagination-color": "#ed1d24",
+                "--swiper-pagination-bullet-inactive-color": "#888888",
+                "--swiper-pagination-bullet-inactive-opacity": "1",
+                "--swiper-pagination-bullet-size": "12px",
+                "--swiper-pagination-bullet-horizontal-gap": "5px"
+              }}
             pagination={{
                 clickable: true,
                 dynamicBullets: true,

@@ -5,11 +5,11 @@ import {Menu} from '@headlessui/react'
 import {FaClock} from 'react-icons/fa'
 import { FaArrowRightLong } from 'react-icons/fa6'
 
-const hours = ['10:00 AM', '12:00AM', '14:00AM', '16:00AM']
+const hours = ['10:00 AM - 11:00AM', '12:00PM - 1:00PM', '3:00PM - 4:00PM', '7:00PM - 8:00PM']
 
 
 export default function HoursSelection() {
-  const [hour, setHour] = useState('10:00 AM')
+  const [hour, setHour] = useState('10:00 AM - 11:00AM')
   return (
     <Menu as='div' className='w-full h-full flex xl:flex-row'>
         
@@ -26,11 +26,11 @@ export default function HoursSelection() {
 
             <div className='flex items-center gap-x-3 xl:ml-6'>
             <div className='uppercase font-medium text-[13px] text-seconday text-center xl:ml-6 xl:text-left'>
-              {hour}
+              {hour.split('-')[0]}
             </div>
             <FaArrowRightLong className='text-accent text-[12px]'/>
-            <div className='uppercase font-medium text-[13px] text-seconday text-center xl:ml-6 xl:text-left'>
-              {hour}
+            <div className='uppercase font-medium text-[13px] text-seconday text-center  xl:text-left'>
+              {hour.split('-')[1]}
             </div>
             </div>
           </div>
