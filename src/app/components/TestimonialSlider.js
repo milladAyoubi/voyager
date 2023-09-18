@@ -18,22 +18,22 @@ import Image from 'next/image'
 
 const testimonialData = [
     {
-        message: 'They truly exceeded my expectation with the quality service. My retan experience was truely a delight.',
-        imageava: '/images/testimonial/avatar.png',
-        name: 'Sarah Morgen',
+        message: 'Renting from Voyager is like participating in an extreme scavenger hunt. Will you find your car in the labyrinthine parking lot?',
+        imageava: '/images/testimonial/cynthia.png',
+        name: 'Cynthia Morgen',
         job: 'Manager of Client Relations at Meta'
     },
     {
-        message: 'They truly exceeded my expectation with the quality service. My retan experience was truely a delight.',
-        imageava: '/images/testimonial/avatar.png',
-        name: 'Sarah Morgen',
-        job: 'Manager of Client Relations at Meta'
+        message: 'Voyager Car Rental: The company that truly understands the value of patience. Waiting for your rental car is like a meditation retreat.',
+        imageava: '/images/testimonial/maximus.png',
+        name: 'Maximus Ducard',
+        job: 'Software Developer'
     },
     {
         message: 'They truly exceeded my expectation with the quality service. My retan experience was truely a delight.',
-        imageava: '/images/testimonial/avatar.png',
-        name: 'Sarah Morgen',
-        job: 'Manager of Client Relations at Meta'
+        imageava: '/images/testimonial/victor.png',
+        name: 'Victor Valentino',
+        job: 'F1 Assistant Driver'
     }
 
 ]

@@ -57,7 +57,7 @@ export default function Cta() {
             initial='hidden'
             whileInView={'show'}
             viewport={{once:false, amount: 0.2}}
-            className='mb-20'>
+            className='mb-20 xl:relative xl:right-40'>
                 <Image
                 src={'/images/carSlider/mercedes01.png'}
                 width={520}
