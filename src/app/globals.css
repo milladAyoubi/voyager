@@ -10,10 +10,10 @@
     @apply text-seconday;
   }
   .h1 {
-    @apply text-4xl lg:text-[64px] text-primary lg:leading-[72px] font-extrabold mb-[18px];
+    @apply text-lg lg:text-[44px] xl:text-[64px] text-primary lg:leading-[52px] font-extrabold mb-[18px];
   }
   .h2 {
-    @apply text-4xl mb-6 font-bold;
+    @apply text-lg mb-6 font-bold;
   }
   .h3 {
     @apply text-lg mb-4 font-semibold;
