@@ -12,8 +12,8 @@ import {MdHandshake, MdKey, MdTrendingUp} from 'react-icons/md'
 
 export default function Why() {
   return (
-    <section className='section flex items-center bg-green' id='why'>
-      <div className="container mx-auto">
+    <section className='section my-20 flex items-center bg-green' id='why'>
+      <div className="container mx-auto mt-20">
         <motion.h2 
         variants={fadeIn('up', 0.4)}
         initial='hidden'

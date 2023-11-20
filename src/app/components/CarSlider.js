@@ -23,7 +23,7 @@ const cars = [
         image: '/images/carSlider/lexus02.png',
         info: [{
             icon: 'icons/carSlider/gearshift.svg',
-            text: 'Automatic',
+            text: 'Auto',
         },
         {
             icon: 'icons/carSlider/seat.svg',
@@ -52,7 +52,7 @@ const cars = [
         image: '/images/carSlider/range02.png',
         info: [{
             icon: 'icons/carSlider/gearshift.svg',
-            text: 'Automatic',
+            text: 'Auto',
         },
         {
             icon: 'icons/carSlider/seat.svg',
@@ -81,7 +81,7 @@ const cars = [
         image: '/images/carSlider/jag02.png',
         info: [{
             icon: 'icons/carSlider/gearshift.svg',
-            text: 'Automatic',
+            text: 'Auto',
         },
         {
             icon: 'icons/carSlider/seat.svg',
@@ -139,7 +139,7 @@ const cars = [
         image: '/images/carSlider/supra02.png',
         info: [{
             icon: 'icons/carSlider/gearshift.svg',
-            text: 'Automatic',
+            text: 'Auto',
         },
         {
             icon: 'icons/carSlider/seat.svg',
@@ -184,18 +184,18 @@ export default function CarSlider() {
                 dynamicBullets: true,
             }} 
             modules={[Pagination]}
-            className='xl:h-[590px] h-[550px]'
+            className='lg:h-[600px] h-[580px] '
             breakpoints={{
 
-                320:{slidesPerView:1, spaceBetween:15},
-                640:{slidesPerView:2, spaceBetween:32},
+                320:{slidesPerView:1, spaceBetween:32},
+                640:{slidesPerView:1, spaceBetween:12},
                 1260:{slidesPerView:3, spaceBetween:32},
                                     
                  }}>
             
             {cars.map((car, index) => {
                 return <SwiperSlide key={index}>
-                    <div className='max-w-[385px] mx-auto sm:mx-0  p-4 rounded-2xl'>
+                    <div className='lg:max-w-[380px] mx-auto  sm:mx-0 p-4 rounded-2lg'>
                         <Image src={car.image} width={380} height={284} className="hover:scale-105 transition-all duration-300"alt=''/>
                         <div className='flex justify-between'>
                             <div>
@@ -209,15 +209,15 @@ export default function CarSlider() {
                                 <FaStar className='text-[21px] text-amber-500/90'/>
                             </div>
                         </div>
-                        <div className='flex gap-x-3 xl:gap-x-4 w-max mb-10'>
+                        <div className='flex gap-x-3 lg:gap-x-4 w-max mb-10'>
                             {car.info.map((item, index) => {
                                 return (
                                     <div key={index} className='flex flex-col items-center gap-y-1'>
-                                        <div className='bg-primary/90 w-12 h-12 rounded-full flex justify-center items-center mb-2'>
+                                        <div className='bg-primary/90 w-10 h-10 rounded-full flex justify-center items-center mb-2'>
                                             <Image
                                              src={item.icon}
-                                             width={24}
-                                             height={24}
+                                             width={20}
+                                             height={20}
                                              alt=''
                                             />
                                         </div>
