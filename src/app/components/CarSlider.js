@@ -187,9 +187,9 @@ export default function CarSlider() {
             className='lg:h-[600px] h-[580px] '
             breakpoints={{
 
-                320:{slidesPerView:1, spaceBetween:32},
-                640:{slidesPerView:1, spaceBetween:12},
-                1260:{slidesPerView:3, spaceBetween:32},
+                760:{slidesPerView:1, spaceBetween:32},
+                800:{slidesPerView:2, spaceBetween:12},
+                1080:{slidesPerView:3, spaceBetween:22},
                                     
                  }}>
             
