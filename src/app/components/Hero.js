@@ -40,7 +40,7 @@ export default function Hero() {
             </motion.div>
           </div>
           <motion.div variants={fadeIn('up',0.2)} initial="hidden" whileInView={"show"} viewport={{once: false, amount:0.6}} className='relative overflow-hidden w-full lg:h-full h-[40%] max-w-[50vh] md:max-w-[70vw] lg:max-w-[1280px] lg:max-h-[452px] lg:absolute min-[80px] right-[0px] lg:top-38  '>
-            <Image src={'/images/hero/car.png'} fill alt='' style={{objectFit: 'contain'}} priority className='lg:!left-[580px] lg:fixed' ></Image>
+            <Image src={'/images/hero/car.png'} fill alt='' style={{objectFit: 'contain'}} priority className='lg:!left-[600px] lg:fixed' ></Image>
           </motion.div>
         </div>
       </div>

@@ -16,17 +16,21 @@ const About = () => {
   return (
     <section className='section mt-20 flex items-center' id="about" ref={ref}>
         <div className="container mx-auto">
-          <div className='flex flex-col xl:flex-row xl:justify-between'>
-            <div className='flex-1 mb-8 xl:mb-0'>
-              <Image className='rounded-[20px]' src={'/images/about/ferrari02.png'}
-              width={600} 
-              height={448}
+          <div className='flex flex-col lg:flex-row lg:gap-x-8 lg:justify-between'>
+            <div className='flex-1 mb-8 lg:mb-0'>
+            <Image
+              src={'/images/about/ferrari02.png'}
+              layout="responsive"
+              width={250}
+              height={250}
+              objectFit="cover"
+              objectPosition="center"
               alt=''
-              />
+            />
             </div>
 
-            <div className='flex-1 flex items-center xl:justify-center'>
-              <div className='xl:max-w-[520px]'>
+            <div className='flex-1 flex items-center lg:justify-center'>
+              <div className='lg:max-w-[520px]'>
                 <p className='bg-accent/10 w-[180px] text-accent/90 font-bold py-2 px-6 rounded-full my-4 flex gap-x-1'>Trusted Globally</p>
                 <h2 className='h2'>Car Services Simplified </h2>
                 <p>Rent, Choose and repair with ease. Our convenient location, diverse car types, and reliable repairs points ensure a seamless car experience.</p>
@@ -59,7 +63,7 @@ const About = () => {
                     </div>
                   </div>
                 </div>
-                <button className='hidden xl:block bg-accent hover:bg-accent-hover
+                <button className='lg:block bg-accent hover:bg-accent-hover
                 rounded-[10px] w-full h-16 uppercase font-medium text-white tracking-[2px] text-[13px] max-w-[184px]'>
                   See All Cars
                 </button>
