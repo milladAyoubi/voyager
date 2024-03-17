@@ -19,12 +19,12 @@ export default function Hero() {
               initial="hidden"
               whileInView={"show"}
               viewport={{ once: false, amount: 0.6 }}
-              className="h1"
+              className="h1 xl:leading-[70px]"
             >
-              Explore The{" "}
-              <span className="text-accent">Finest Global Offers</span> With
-              Voyager
-            </motion.h1>
+              Explore The
+              <span className="text-accent "> Finest Global Offers </span>
+              With Voyager{" "}
+            </motion.h1>{" "}
             <motion.p
               variants={fadeIn("down", 0.4)}
               initial="hidden"
@@ -32,10 +32,9 @@ export default function Hero() {
               viewport={{ once: false, amount: 0.6 }}
               className="description max-w-[550px] mx-auto lg:mx-0 mb-6 lg:m-6"
             >
-              Find your ideal ride for any adventure you desire. With our
-              diverse range of vehicles for any occasion.
+              Find your ideal ride for any adventure you desire.With our diverse
+              range of vehicles for any occasion.{" "}
             </motion.p>
-
             <motion.div
               variants={fadeIn("down", 0.6)}
               initial="hidden"
@@ -43,10 +42,7 @@ export default function Hero() {
               viewport={{ once: false, amount: 0.8 }}
               className="flex gap-x-3 justify-center lg:justify-start"
             >
-              <button
-                className=" bg-accent hover:bg-accent-hover
-                rounded-[10px] w-full h-16 uppercase font-medium text-white tracking-[2px] text-[13px] max-w-[224px]"
-              >
+              <button className=" bg-accent hover:bg-accent-hover rounded-[10px] w-full h-16 uppercase font-medium text-white tracking-[2px] text-[13px] max-w-[224px]">
                 <Link
                   to={"cars"}
                   smooth={true}
@@ -54,29 +50,29 @@ export default function Hero() {
                   className="cursor-pointer"
                 >
                   <div className="flex items-center justify-center gap-x-2">
-                    View Collection
+                    View Collection{" "}
                     <FaChevronCircleDown className="text-[18px]" />
-                  </div>
-                </Link>
-              </button>
+                  </div>{" "}
+                </Link>{" "}
+              </button>{" "}
               <button className="btn-cta hidden">
                 <Image
                   src={"/icons/buttons/google-play.svg"}
                   width={132}
                   height={36}
                   alt=""
-                ></Image>
-              </button>
+                ></Image>{" "}
+              </button>{" "}
               <button className="btn-cta hidden">
                 <Image
                   src={"/icons/buttons/app-store.svg"}
                   width={132}
                   height={36}
                   alt=""
-                ></Image>
-              </button>
-            </motion.div>
-          </div>
+                ></Image>{" "}
+              </button>{" "}
+            </motion.div>{" "}
+          </div>{" "}
           <motion.div
             variants={fadeIn("up", 0.2)}
             initial="hidden"
@@ -91,10 +87,10 @@ export default function Hero() {
               style={{ objectFit: "contain" }}
               priority
               className="lg:!left-[600px] lg:fixed"
-            ></Image>
-          </motion.div>
-        </div>
-      </div>
+            ></Image>{" "}
+          </motion.div>{" "}
+        </div>{" "}
+      </div>{" "}
       {searchActive ? (
         <div className="fixed top-[80px] z-10 w-full max-w-[1920px]">
           <SearchAuto />
@@ -109,7 +105,7 @@ export default function Hero() {
         >
           <SearchAuto />
         </motion.div>
-      )}
+      )}{" "}
     </section>
   );
 }

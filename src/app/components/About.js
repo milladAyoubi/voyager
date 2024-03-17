@@ -36,9 +36,10 @@ const About = () => {
 
           <div className="flex-1 flex items-center lg:justify-center">
             <div className="lg:max-w-[520px]">
-              <p className="bg-accent/10 w-[180px] text-accent/90 font-bold py-2 px-6 rounded-full my-4 flex gap-x-1">
+              <p className="bg-accent/10 w-[180px] inline text-accent/90 font-bold py-2 px-6 rounded-full my-4 gap-x-1">
                 Trusted Globally
               </p>
+              <p className="text-white">dasda</p>
               <h2 className="h2">Car Services Simplified </h2>
               <p>
                 Rent, Choose and repair with ease. Our convenient location,
